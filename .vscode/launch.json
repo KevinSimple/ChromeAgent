@@ -8,10 +8,12 @@
             "type": "node",
             "request": "launch",
             "name": "启动程序",
-            "program": "${workspaceFolder}\\built\\main.js",
+            "program": "${workspaceFolder}\\src\\main.ts",
             "outFiles": [
-                "${workspaceFolder}/**/*.js"
-            ]
+                "${workspaceFolder}\\built\\*.js"
+            ],
+            "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
+            "sourceMaps": true,
 
         }
 
